@@ -1,6 +1,7 @@
 # Kayfa Content Marketing Crew
 
 3-agent CrewAI pipeline (Strategist-Researcher, Writer-Editor, Publisher) with MongoDB Atlas-persisted memory + knowledge, FastAPI backend, human-in-the-loop approval, and a vanilla HTML/JS chat UI.
+![image](https://github.com/user-attachments/assets/your-image-id)
 
 ## Setup
 
