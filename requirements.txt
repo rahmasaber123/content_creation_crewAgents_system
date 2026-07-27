@@ -1,0 +1,11 @@
+crewai[tools]
+litellm
+fastapi
+uvicorn[standard]
+python-dotenv
+agentops
+tavily-python
+fpdf2
+pymongo
+openai
+pydantic

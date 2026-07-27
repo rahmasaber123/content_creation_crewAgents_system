@@ -1,0 +1,23 @@
+# Environment variables (NEVER commit secrets to git)
+.env
+.env.*
+!.env.example
+
+# Python bytecode and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE settings (PyCharm, VS Code, etc.)
+.idea/
+.vscode/
+
+# Database files
+*.db
+*.sqlite3

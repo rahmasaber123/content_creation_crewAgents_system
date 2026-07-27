@@ -1,0 +1,28 @@
+2026-07-27 16:53:24,748 - INFO - Session Replay for default trace: https://app.agentops.ai/sessions?trace_id=cca3395f25af2fc7465ca6b8b3c75775
+2026-07-27 16:53:25,310 - INFO - You're on the agentops free plan 🤔
+2026-07-27 16:56:25,925 - ERROR - Failed to instrument CrewaiInstrumentor for agentops.instrumentation.agentic.crewai: cannot import name 'Agent' from partially initialized module 'crewai.agent' (most likely due to a circular import) (C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\crewai\agent\__init__.py)
+Traceback (most recent call last):
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\agentops\instrumentation\__init__.py", line 511, in instrument_one
+    instrumentor.instrument(tracer_provider=tracer.provider)
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\opentelemetry\instrumentation\instrumentor.py", line 114, in instrument
+    result = self._instrument(  # pylint: disable=assignment-from-no-return
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\agentops\instrumentation\common\instrumentor.py", line 63, in _instrument
+    self._custom_wrap(**kwargs)
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\agentops\instrumentation\agentic\crewai\instrumentation.py", line 105, in _custom_wrap
+    wrap_function_wrapper(
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\wrapt\patches.py", line 114, in wrap_function_wrapper
+    return wrap_object(module, name, FunctionWrapper, (wrapper,))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\wrapt\patches.py", line 60, in wrap_object
+    (parent, attribute, original) = resolve_path(module, name)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\wrapt\patches.py", line 17, in resolve_path
+    __import__(module)
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\agentops\instrumentation\__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\crewai\crew.py", line 59, in <module>
+    from crewai.agent import Agent
+ImportError: cannot import name 'Agent' from partially initialized module 'crewai.agent' (most likely due to a circular import) (C:\Users\hp\miniconda3\envs\kayfa\Lib\site-packages\crewai\agent\__init__.py)
+2026-07-27 17:09:01,632 - INFO - Session Replay for default.session trace: https://app.agentops.ai/sessions?trace_id=cca3395f25af2fc7465ca6b8b3c75775
